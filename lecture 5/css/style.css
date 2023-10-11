@@ -1,0 +1,63 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.box{
+    width: 300px;
+    border: 2px solid lightgrey;
+    padding: 20px;
+}
+.box h2{
+    margin: 10px 0;
+    position: relative;
+    display: inline-block;
+    color: black;
+    transition:all 2s linear;
+    
+}
+.box h2:hover{
+    color: white;
+}
+.box h2::after{
+    content: "";
+    width: 50%;
+    height: 100%;
+    background-color: rgb(138, 42, 42);
+    position: absolute;
+    left: 0;
+    z-index: -1;  
+    transition: all 2s; 
+}
+.box h2:hover::after{
+    width: 100%;
+    background-color: black;
+    color: white;
+}
+.box h2::before{
+    content: "";
+    width: 50%;
+    height: 100%;
+    background-color: rgb(28, 151, 123);
+    position: absolute;
+    right: 0;
+    z-index: -1;   
+}
+.box p{
+    text-align: justify;
+}
+button{
+    padding: 10px 30px;
+    margin: 10px 0;
+    background-color: black;
+    color: white;
+}
+button:hover{
+    background-color: aqua;
+}
+
+
+input[type="text"]:focus{
+background-color: aqua;
+}
